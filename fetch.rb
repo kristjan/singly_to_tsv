@@ -21,14 +21,14 @@ $stderr.puts "Converting #{map.inspect}"
 API_HOST = 'https://api.singly.com'
 
 data = HTTParty.get(API_HOST + path, {
-  query: {
-    access_token: ENV['TOKEN'],
-    fields: map.keys.join(','),
-    limit: 5000
+  :query => {
+    :access_token => ENV['TOKEN'],
+    :fields       => map.keys.join(','),
+    :limit        => 5000
   }
 })
 
-out = CSV.generate(col_sep: "\t") do |csv|
+out = CSV.generate(:col_sep => "\t") do |csv|
   columns = map.keys
   csv << columns.map{|col| map[col]}
   data.each do |datum|
