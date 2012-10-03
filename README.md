@@ -1,5 +1,9 @@
 # Singly &rarr; TSV
 
+## Setup
+
+Put your Singly access token in your environment as `TOKEN`
+
 ## Usage
 
     bundle exec ./fetch /path/on/singly singly.field:OutputField [...]
