@@ -13,10 +13,10 @@ Put your Singly access token in your environment as `TOKEN`
 ### Command
 
 ```
-bundle exec ./fetch.rb
-  /types/checkins
-  data.venue.name:LocationName
-  data.venue.location.lat:Latitude
+bundle exec ./fetch.rb              \
+  /types/checkins                   \
+  data.venue.name:LocationName      \
+  data.venue.location.lat:Latitude  \
   data.venue.location.lng:Longitude
 ```
 
