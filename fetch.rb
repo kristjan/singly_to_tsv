@@ -23,7 +23,8 @@ API_HOST = 'https://api.singly.com'
 data = HTTParty.get(API_HOST + path, {
   query: {
     access_token: ENV['TOKEN'],
-    fields: map.keys.join(',')
+    fields: map.keys.join(','),
+    limit: 5000
   }
 })
 
